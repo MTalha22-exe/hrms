@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Redirect /login to index.php?page=login
+RewriteRule ^login/?$ index.php?page=login [L,QSA]
+
+# Redirect /dashboard to index.php?page=dashboard
+RewriteRule ^dashboard/?$ index.php?page=dashboard [L,QSA]
+
+# Redirect root to login page
+RewriteRule ^$ index.php?page=login [L,QSA]
+
+# Handle other routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ index.php?page=$1 [L,QSA]
