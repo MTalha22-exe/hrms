@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? '';
     
     // Query superadmin from database
-    $stmt = $conn->prepare("SELECT * FROM superadmins WHERE email = ?");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     
@@ -17,7 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($admin) {
         // If using raw passwords (not hashed)
-        if ($admin['password'] === $password) {
+       if (password_verify($password, $admin['password'])) {
+
             $_SESSION['user_logged_in'] = true;
             $_SESSION['user_id'] = $admin['id'];
             $_SESSION['user_name'] = $admin['name'];
