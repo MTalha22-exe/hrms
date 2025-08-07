@@ -5,10 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $page_title ?></title>
-  <!-- Fonts & CSS -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+  
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= BASE_URL ?>/assets/plugins/fontawesome-free/css/all.min.css">
+  
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  
+  <!-- AdminLTE Theme style -->
   <link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/css/adminlte.min.css">
+
 </head>
 <body class="<?= $body_class ?>">
 <div class="wrapper">
@@ -23,7 +34,6 @@
       <a href="index.php?page=dashboard" class="nav-link">Home</a>
     </li>
   </ul>
-  
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -59,7 +69,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="assets/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                        <img src="<?= BASE_URL ?>/assets/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 Brad Diesel
@@ -75,7 +85,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="assets/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                        <img src="<?= BASE_URL ?>/assets/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 John Pierce
@@ -123,10 +133,18 @@
         <!-- User Account Dropdown -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <img src="assets/dist/img/user2-160x160.jpg" alt="User Image" class="img-size-32 img-circle">
+                <img src="<?= BASE_URL ?>/assets/dist/img/user2-160x160.jpg" alt="User Image" class="img-size-32 img-circle">
                 <span class="d-none d-md-inline"><?php echo $_SESSION['user_name'] ?? 'Administrator'; ?></span>
             </a>
-            
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="index.php?page=profile" class="dropdown-item">
+                    <i class="fas fa-user mr-2"></i> Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="logout.php" class="dropdown-item">
+                    <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                </a>
+            </div>
         </li>
 
         <li class="nav-item">

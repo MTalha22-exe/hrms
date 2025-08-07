@@ -78,18 +78,7 @@ $additional_scripts = [
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Welcome to Dashboard</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>This is your dashboard content. You can add charts, tables, and other components here.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 </div>
