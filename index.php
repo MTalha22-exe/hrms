@@ -3,7 +3,7 @@ session_start();
 
 // Global constants
 define('ROOT_PATH', __DIR__);
-define('BASE_URL', '/adminLTE');
+define('BASE_URL', '/hrms'); // Adjust this to your actual base URL
 
 // Allowed pages
 $allowed_pages = [
@@ -21,7 +21,7 @@ if (!in_array($page, $allowed_pages)) {
 
 // Redirect to login if not authenticated (except login page)
 if ($page !== 'login' && !isset($_SESSION['user_logged_in'])) {
-    header('Location: login');
+    header('Location: index.php?page=login');
     exit();
 }
 
@@ -33,13 +33,22 @@ if ($page === 'login') {
     include 'pages/login.php';
 } else {
     // All other pages use the main layout
-    $page_title = 'AdminLTE | ' . ucfirst($page);
-    $body_class = 'hold-transition sidebar-mini';
+    $page_title = 'AdminLTE | ' . ucfirst(str_replace('-', ' ', $page));
+    $body_class = 'hold-transition sidebar-mini layout-fixed';
     $show_navbar = true;
     
     // Include layout components
     include 'layout/header.php';
     include 'layout/sidebar.php';
-    include "pages/$page.php";
+    
+    // Include the specific page content
+    $page_file = "pages/$page.php";
+    if (file_exists($page_file)) {
+        include $page_file;
+    } else {
+        // 404 page or default content
+        echo '<div class="content-wrapper"><div class="content"><div class="container-fluid"><h1>Page Not Found</h1><p>The requested page could not be found.</p></div></div></div>';
+    }
+    
     include 'layout/footer.php';
 }
