@@ -136,15 +136,7 @@
                 <img src="<?= BASE_URL ?>/assets/dist/img/user2-160x160.jpg" alt="User Image" class="img-size-32 img-circle">
                 <span class="d-none d-md-inline"><?php echo $_SESSION['user_name'] ?? 'Administrator'; ?></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a href="index.php?page=profile" class="dropdown-item">
-                    <i class="fas fa-user mr-2"></i> Profile
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="logout.php" class="dropdown-item">
-                    <i class="fas fa-sign-out-alt mr-2"></i> Logout
-                </a>
-            </div>
+           
         </li>
 
         <li class="nav-item">
