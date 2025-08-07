@@ -3,7 +3,7 @@ session_start();
 
 // Global constants
 define('ROOT_PATH', __DIR__);
-define('BASE_URL', '/adminLTE');
+define('BASE_URL', '/hrms');
 
 // Allowed pages
 $allowed_pages = [
