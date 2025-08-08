@@ -24,7 +24,7 @@ $show_navbar = true;
 
   <div class="card">
       <div class="card-header">
-        <h3 class="card-title">DataTable with default features</h3>
+        <h3 class="card-title">DataTable with Users</h3>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
@@ -48,48 +48,7 @@ $show_navbar = true;
             <td> 4</td>
             <td>X</td>
           </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Dillo 0.8</td>
-            <td>Embedded devices</td>
-            <td>-</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Links</td>
-            <td>Text only</td>
-            <td>-</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Lynx</td>
-            <td>Text only</td>
-            <td>-</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>IE Mobile</td>
-            <td>Windows Mobile 6</td>
-            <td>-</td>
-            <td>C</td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>PSP browser</td>
-            <td>PSP</td>
-            <td>-</td>
-            <td>C</td>
-          </tr>
-          <tr>
-            <td>Other browsers</td>
-            <td>All others</td>
-            <td>-</td>
-            <td>-</td>
-            <td>U</td>
-          </tr>
+
           </tbody>
           <tfoot>
           <tr>
@@ -106,22 +65,6 @@ $show_navbar = true;
   </div>
   <!-- /.card -->
 </div>
-
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-  });
-
-  function deleteUser(userId) {
-    if (confirm('Are you sure you want to delete this user?')) {
-      alert('Delete user with ID: ' + userId);
-    }
-  }
-</script>
-
 <script src="/hrms/assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/hrms/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -159,3 +102,18 @@ $show_navbar = true;
 <script src="assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  });
+
+  function deleteUser(userId) {
+    if (confirm('Are you sure you want to delete this user?')) {
+      alert('Delete user with ID: ' + userId);
+    }
+  }
+</script>
+
