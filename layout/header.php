@@ -5,7 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $page_title ?></title>
-  
+
+    <!-- bootstrap 4.6.1 -->
+    <script src="/hrms/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- pooper.js -->
+    <script src="/hrms/assets/plugins/popper/umd/popper.js"></script>
+
+  <!-- bootstrap 4 -->
+    <script src="/hrms/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/hrms/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+
+  <!-- new link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   
@@ -22,6 +38,8 @@
 
 </head>
 <body class="<?= $body_class ?>">
+
+
 <div class="wrapper">
 
 <?php if ($show_navbar ?? false) : ?>
