@@ -14,10 +14,23 @@ $allowed_pages = [
 ];
 
 // Get requested page or default to login
-$page = $_GET['page'] ?? 'login';
-if (!in_array($page, $allowed_pages)) {
-    $page = 'login';
+// If no page is specified and user is logged in, redirect to dashboard
+if (!isset($_GET['page']) && isset($_SESSION['user_logged_in'])) {
+    header('Location: index.php?page=dashboard');
+    exit();
 }
+
+// Get requested page or default to login
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+    if (!in_array($page, $allowed_pages)) {
+        $page = 'login';
+    }
+} else {
+    // If already logged in, go to dashboard, otherwise to login
+    $page = isset($_SESSION['user_logged_in']) ? 'dashboard' : 'login';
+}
+
 
 // Redirect to login if not authenticated (except login page)
 if ($page !== 'login' && !isset($_SESSION['user_logged_in'])) {
