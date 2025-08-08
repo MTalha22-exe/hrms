@@ -1,0 +1,83 @@
+
+body {
+  background-color: #f4f6f9;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0 350px 0 350px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box-wrapper {
+  display: flex;
+  width: 850px;
+  max-width: 95%;
+  height: 450px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Box - Login Form */
+.left-box {
+  flex: 2;
+  background-color: #198754;
+  padding: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 250px; /* Reduced width */
+}
+
+.login-logo a {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-light {
+  background-color: white;
+  color: #198754;
+  font-weight: bold;
+}
+
+/* Right Box - Logo */
+.right-box {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40.5%;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  color: #198754;
+  font-weight: bold;
+}
