@@ -1,5 +1,4 @@
 <?php
-// Set page-specific variables
 $page_title = 'AdminLTE | Dashboard';
 $body_class = 'hold-transition sidebar-mini layout-fixed';
 $show_navbar = true;

@@ -1,7 +1,5 @@
 <?php
 require_once 'config.php';
-
-// Handle profile update
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_profile'])) {
     $user_id = $_SESSION['user_id'];
     $name = $_POST['name'] ?? '';
@@ -23,14 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_profile'])) {
     exit();
 }
 
-// Handle password change
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
     $user_id = $_SESSION['user_id'];
     $current_password = $_POST['current_password'] ?? '';
     $new_password = $_POST['new_password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
-    
-    // Get current password hash
     $stmt = $conn->prepare("SELECT password FROM users WHERE id = ?");
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
@@ -62,8 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
     header('Location:profile');
     exit();
 }
-
-// Get user data
 $user_id = $_SESSION['user_id'];
 $stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->bind_param("i", $user_id);
@@ -77,7 +70,6 @@ $show_navbar = true;
 ?>
 
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
@@ -93,12 +85,9 @@ $show_navbar = true;
       </div>
     </div>
   </section>
-
-  <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
       
-      <!-- Success/Error Messages -->
       <?php if (isset($_SESSION['success_message'])): ?>
         <div class="alert alert-success alert-dismissible fade show">
           <?php echo $_SESSION['success_message']; unset($_SESSION['success_message']); ?>
@@ -119,8 +108,6 @@ $show_navbar = true;
 
       <div class="row">
         <div class="col-md-3">
-
-          <!-- Profile Image -->
           <div class="card card-primary card-outline">
             <div class="card-body box-profile">
               <div class="text-center">
@@ -146,8 +133,6 @@ $show_navbar = true;
               </ul>
             </div>
           </div>
-
-          <!-- About Me Box -->
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">About Me</h3>
@@ -173,7 +158,6 @@ $show_navbar = true;
             <div class="card-body">
               <div class="tab-content">
                 <div class="active tab-pane" id="activity">
-                  <!-- Activity Timeline -->
                   <div class="timeline timeline-inverse">
                     <div class="time-label">
                       <span class="bg-danger">

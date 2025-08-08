@@ -1,13 +1,10 @@
 <?php
-require_once 'config.php'; // include database connection
+require_once 'config.php';
 
-// ✅ Redirect if already logged in
 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
     header('Location: dashboard');
     exit();
 }
-
-// ✅ Handle login
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -42,22 +39,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login | HRMS</title>
-
-  <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
   <link rel="stylesheet" href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- AdminLTE -->
   <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+  <link rel="icon" type="image/png" href="assets/dist/img/CCP LOGO FINAL.png">
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="#" class="h1"><b>HR</b>MS</a>
+      <a href="#" class="h1"><b>HRMS</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
@@ -93,17 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           </div>
         </div>
       </form>
-
-      <!-- Optional social auth links -->
       
-      <div class="social-auth-links text-center mt-2 mb-3">
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
+     
      
 
       <p class="mb-1">
@@ -115,8 +99,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
   </div>
 </div>
-
-<!-- Scripts -->
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/dist/js/adminlte.min.js"></script>
