@@ -22,98 +22,92 @@ $show_navbar = true;
     </div>
   </div>
 
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Users DataTable with Export & Visibility Features</h3>
-              <div class="card-tools">
-                <a href="index.php?page=add-user" class="btn btn-primary btn-sm">
-                  <i class="fas fa-plus"></i> Add New User
-                </a>
-              </div>
-            </div>
-            <div class="card-body">
-              <table id="example2" class="table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>Created Date</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td><span class="badge badge-primary">Admin</span></td>
-                    <td><span class="badge badge-success">Active</span></td>
-                    <td>2025-01-15</td>
-                    <td>
-                      <a href="index.php?page=edit-user&id=1" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                      <a href="#" class="btn btn-danger btn-sm" onclick="deleteUser(1)"><i class="fas fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>jane@example.com</td>
-                    <td><span class="badge badge-secondary">User</span></td>
-                    <td><span class="badge badge-success">Active</span></td>
-                    <td>2025-01-14</td>
-                    <td>
-                      <a href="index.php?page=edit-user&id=2" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                      <a href="#" class="btn btn-danger btn-sm" onclick="deleteUser(2)"><i class="fas fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Mike Johnson</td>
-                    <td>mike@example.com</td>
-                    <td><span class="badge badge-warning">Manager</span></td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                    <td>2025-01-13</td>
-                    <td>
-                      <a href="index.php?page=edit-user&id=3" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                      <a href="#" class="btn btn-danger btn-sm" onclick="deleteUser(3)"><i class="fas fa-trash"></i></a>
-                    </td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>Created Date</th>
-                    <th>Actions</th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
+  <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">DataTable with Users</h3>
       </div>
-    </div>
-  </section>
-</div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th>Rendering engine</th>
+            <th>Browser</th>
+            <th>Platform(s)</th>
+            <th>Engine version</th>
+            <th>CSS grade</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Trident</td>
+            <td>Internet
+              Explorer 4.0
+            </td>
+            <td>Win 95+</td>
+            <td> 4</td>
+            <td>X</td>
+          </tr>
 
+          </tbody>
+          <tfoot>
+          <tr>
+            <th>Rendering engine</th>
+            <th>Browser</th>
+            <th>Platform(s)</th>
+            <th>Engine version</th>
+            <th>CSS grade</th>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+<script src="/hrms/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/hrms/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables & Plugins -->
+<script src="/hrms/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="/hrms/assets/plugins/jszip/jszip.min.js"></script>
+<script src="/hrms/assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="/hrms/assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="/hrms/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="/hrms/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/hrms/assets/dist/js/adminlte.min.js"></script>
+
+<!-- jQuery -->
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+
+<!-- DataTables JS -->
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Buttons for Export -->
+<script src="assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="assets/plugins/jszip/jszip.min.js"></script>
+<script src="assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
   $(function () {
-    $("#example2").DataTable({
-      "responsive": true,
-      "lengthChange": false,
-      "autoWidth": false,
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
 
   function deleteUser(userId) {
@@ -122,3 +116,4 @@ $show_navbar = true;
     }
   }
 </script>
+
