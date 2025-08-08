@@ -26,7 +26,6 @@ $show_navbar = true;
       <div class="card-header">
         <h3 class="card-title">DataTable with Users</h3>
       </div>
-      <!-- /.card-header -->
       <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
           <thead>
@@ -61,14 +60,10 @@ $show_navbar = true;
           </tfoot>
         </table>
       </div>
-      <!-- /.card-body -->
   </div>
-  <!-- /.card -->
 </div>
 <script src="/hrms/assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
 <script src="/hrms/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables & Plugins -->
 <script src="/hrms/assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="/hrms/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="/hrms/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -81,19 +76,12 @@ $show_navbar = true;
 <script src="/hrms/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="/hrms/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="/hrms/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
 <script src="/hrms/assets/dist/js/adminlte.min.js"></script>
-
-<!-- jQuery -->
 <script src="assets/plugins/jquery/jquery.min.js"></script>
-
-<!-- DataTables JS -->
 <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-
-<!-- Buttons for Export -->
 <script src="assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
 <script src="assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 <script src="assets/plugins/jszip/jszip.min.js"></script>
